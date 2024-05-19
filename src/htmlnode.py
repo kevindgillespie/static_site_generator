@@ -1,6 +1,10 @@
 
 class HTMLNode:
 
+    #An HTMLNode without a tag will just render as raw text
+    #An HTMLNode without a value will be assumed to have children
+    #An HTMLNode without children will be assumed to have a value
+    #An HTMLNode without props simply won't have any attributes
     def __init__(self, tag = None, value = None, children = None, props = None):
         self.tag = tag
         self.value = value
